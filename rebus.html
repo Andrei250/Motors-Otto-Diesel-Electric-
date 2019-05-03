@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Rebus</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/css.css" rel="stylesheet">
+
+     <style>
+
+      #cross{
+          text-align: center;
+          width:30px;
+          height:30px;
+          margin: 0;
+          padding: 0;
+          border-collapse: collapse;
+          border: 1px solid white;
+      }
+      #buttons{
+          width:30%;
+          float: right;
+      }
+      tr{
+          margin: 0;
+          padding: 0;
+          border-collapse: collapse;
+      }
+      td{
+          height: 30px;
+          width: 30px;
+      }
+      #leftBox{
+          float: left;
+      }
+      #rightBox{
+          float: left;
+          clear:left;
+      }
+      .butt{
+          height:50px;
+          width: 107px;
+      }
+      #puzzel{
+          text-align: center;
+          margin: 0;
+          padding: 0;
+          border-collapse: collapse;
+          border: 1px solid black;
+      }
+      .inputBox{
+              width: 40px;
+              height:40px;
+              border: 1px solid black;
+              text-align: center;
+      }
+      #hintsTable{
+          width: 480px;
+          float: left;
+          clear: left;
+      }
+      </style>
+
+  </head>
+
+  <body  onload="initializeScreen()">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Motoare</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="otto.html">Otto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="diesel.html">Diesel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="electric.html">Electric</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rebus.html">Rebus</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!--Imagine mare-->
+    <div class="imagine col-lg-12">
+    
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+
+
+      <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+
+          <!-- Title -->
+          <h1 class="mt-4">Rebus</h1>
+
+          <!-- Author -->
+          <p class="lead">
+            by
+            <b>Dumitrescu Andrei</b>
+          </p>
+
+          
+
+          <hr>
+
+              
+            <div class="contents" style="position: relative;">
+                <article>
+                    <div class="bigD col-lg-8 col-lg-offset-2">
+
+                  <div id="leftBox">
+                            <table id="puzzel" style="margin-top:20px;">
+
+                            </table>
+                            </div>
+                            <div id="rightBox">
+                            <table>
+                                <tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
+                                <td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
+                               </tr>
+                            </table>
+                            </div>
+                            <table id="hintsTable">
+                                    <tr>
+                                        <td><strong>Orizontal:</strong></td><td><strong>Vertical:</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1.Motor pe benzina</td><td>2. Motoare cu producere de caldura sunt motoare ......</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.Motoare pe motorina</td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4. Prima etapa la motoarele cu aprindere prin scanteie si injectie</td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.Motoare care nu polueaza</td>
+                                    </tr>
+                            </table>
+                                   
+              </div>
+                </article>
+
+            </div>
+
+          <hr>
+      </div>
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+          <!-- Categories Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Categories</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="index.html">Motoare</a>
+                    </li>
+                    <li>
+                      <a href="diesel.html">Diesel</a>
+                    </li>
+                    <li>
+                      <a href="rebus.html">Rebus</a>
+                    </li>
+                 
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="otto.html">Otto</a>
+                    </li>
+                    <li>
+                      <a href="electric.html">Electric</a>
+                    </li>
+                 
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Dumi's Creations</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+      //Globals
+    var currentTextInput;
+    var puzzelArrayData;
+    //Loads the Crossword
+    function initializeScreen(){
+        var puzzelTable = document.getElementById("puzzel");
+        puzzelArrayData = preparePuzzelArray();
+        for ( var i = 0; i < puzzelArrayData.length ; i++ ) {
+            var row = puzzelTable.insertRow(-1);
+            var rowData = puzzelArrayData[i];
+            for(var j = 0 ; j < rowData.length ; j++){
+                var cell = row.insertCell(-1);
+                if(rowData[j] != 0){
+                    var txtID = String('txt' + '_' + i + '_' + j);
+                    cell.innerHTML = '<input type="text" class="inputBox" maxlength="1" style="text-transform: lowercase" ' + 'id="' + txtID + '" onfocus="textInputFocus(' + "'" + txtID + "'"+ ')">';
+                }else{
+                    cell.style.backgroundColor  = "black";
+                }
+            }
+        }
+        addHint();
+    }
+    //Adds the hint numbers
+    function addHint(){
+        document.getElementById("txt_0_3").placeholder = "1";
+        document.getElementById("txt_0_4").placeholder = "2";
+        document.getElementById("txt_4_3").placeholder = "3";
+        document.getElementById("txt_7_1").placeholder = "4";
+        document.getElementById("txt_10_0").placeholder = "5";
+     
+
+    }
+    //Stores ID of the selected cell into currentTextInput
+    function textInputFocus(txtID123){
+        currentTextInput = txtID123;
+    }
+    //Returns Array
+    function preparePuzzelArray(){
+    var items = [   [0, 0, 0, 'o', 't', 't', 'o', 0, 0, 0],
+                    [0, 0, 0, 0, 'e', 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 'r', 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 'm', 0, 0, 0, 0, 0],
+                    [0, 0, 0, 'd', 'i', 'e', 's', 'e', 'l', 0],
+                    [0, 0, 0, 0, 'c', 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 'a', 'd', 'm', 'i', 's', 'i', 'e', 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    ['e', 'l', 'e', 'c', 't', 'r', 'i', 'c', 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                ];
+    return items;
+    }
+    //Clear All Button
+    function clearAllClicked(){
+        currentTextInput = '';
+        var puzzelTable = document.getElementById("puzzel");
+        puzzelTable.innerHTML = '';
+        initializeScreen();
+    }
+    //Check button
+    function checkClicked(){
+        for ( var i = 0; i < puzzelArrayData.length ; i++ ) {
+            var rowData = puzzelArrayData[i];
+            for(var j = 0 ; j < rowData.length ; j++){
+                if(rowData[j] != 0){
+                    var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + j);
+                    if(selectedInputTextElement.value != puzzelArrayData[i][j]){
+                        selectedInputTextElement.style.backgroundColor = 'red';
+                        
+                    }else{
+                        selectedInputTextElement.style.backgroundColor = 'white';
+                    }
+                }
+            }
+        }
+    }
+    //Clue Button
+    function clueClicked(){
+        if (currentTextInput != null){
+            var temp1 = currentTextInput;
+            var token = temp1.split("_");
+            var row = token[1];
+            var column = token[2];
+            document.getElementById(temp1).value = puzzelArrayData[row][column];
+            //checkClicked();
+        }
+    }
+    //Solve Button
+    function solveClicked(){
+        if (currentTextInput != null){
+            var temp1 = currentTextInput;
+            var token = temp1.split("_");
+            var row = token[1];
+            var column = token[2];
+            
+            // Print elements on top
+            for(j = row; j >= 0; j--){
+                if(puzzelArrayData[j][column] != 0){
+                    document.getElementById('txt' + '_' + j + '_' + column).value = puzzelArrayData[j][column];
+                    }else break;
+            }
+            // Print elements on right
+            for(i = column; i< puzzelArrayData[row].length; i++){
+                if(puzzelArrayData[row][i] != 0){
+                    document.getElementById('txt' + '_' + row + '_' + i).value = puzzelArrayData[row][i];
+                    }else break;
+            }
+            
+            // Print elements below
+            for(m = row; m< puzzelArrayData.length; m++){
+                if(puzzelArrayData[m][column] != 0){
+                    document.getElementById('txt' + '_' + m + '_' + column).value = puzzelArrayData[m][column];
+                    }else break;
+            }
+            // Print elements on left
+            for(k = column; k >= 0; k--){
+                if(puzzelArrayData[row][k] != 0){
+                    document.getElementById('txt' + '_' + row + '_' + k).value = puzzelArrayData[row][k];
+                    }else break;
+            }
+            // Done!
+            
+        }
+    }
+    </script>
+
+ 
+
+  </body>
+
+</html>
